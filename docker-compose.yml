@@ -1,0 +1,17 @@
+#Version of docker-compose
+version: "3"
+
+# Containers we are going to run
+services:
+  backend:
+    container_name: backend
+    build:
+      context: ./back/
+    restart: always
+    ports:
+      - "8080:8080"
+  mobile:
+    container_name: mobile
+    build:
+      context: ./mobile/
+    restart: always
